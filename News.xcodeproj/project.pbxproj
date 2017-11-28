@@ -78,9 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				095B28C01FCD118E0098E55F /* News */,
-				095B28D51FCD118E0098E55F /* NewsTests */,
-				095B28E01FCD118E0098E55F /* NewsUITests */,
-				095B28BF1FCD118E0098E55F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,16 +89,20 @@
 				095B28DD1FCD118E0098E55F /* NewsUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		095B28C01FCD118E0098E55F /* News */ = {
 			isa = PBXGroup;
 			children = (
-				095B28C11FCD118E0098E55F /* AppDelegate.swift */,
-				095B28C31FCD118E0098E55F /* ViewController.swift */,
-				095B28C51FCD118E0098E55F /* Main.storyboard */,
+				095B28F21FCD12660098E55F /* Support */,
+				095B28F11FCD125C0098E55F /* Model */,
+				095B28F01FCD12560098E55F /* View */,
+				095B28EF1FCD124A0098E55F /* Controller */,
+				095B28D51FCD118E0098E55F /* NewsTests */,
+				095B28E01FCD118E0098E55F /* NewsUITests */,
+				095B28BF1FCD118E0098E55F /* Products */,
 				095B28C81FCD118E0098E55F /* Assets.xcassets */,
-				095B28CA1FCD118E0098E55F /* LaunchScreen.storyboard */,
 				095B28CD1FCD118E0098E55F /* Info.plist */,
 			);
 			path = News;
@@ -123,6 +124,38 @@
 				095B28E31FCD118E0098E55F /* Info.plist */,
 			);
 			path = NewsUITests;
+			sourceTree = "<group>";
+		};
+		095B28EF1FCD124A0098E55F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				095B28C31FCD118E0098E55F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		095B28F01FCD12560098E55F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				095B28C51FCD118E0098E55F /* Main.storyboard */,
+				095B28CA1FCD118E0098E55F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		095B28F11FCD125C0098E55F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		095B28F21FCD12660098E55F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				095B28C11FCD118E0098E55F /* AppDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +463,7 @@
 				DEVELOPMENT_TEAM = A33J354KUK;
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = apple.News;
+				PRODUCT_BUNDLE_IDENTIFIER = apple.NewsLilithh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,7 +478,7 @@
 				DEVELOPMENT_TEAM = A33J354KUK;
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = apple.News;
+				PRODUCT_BUNDLE_IDENTIFIER = apple.NewsLilithh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
