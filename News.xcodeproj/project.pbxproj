@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		092471371FCF132800CAE028 /* TypeNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092471361FCF132800CAE028 /* TypeNewsViewController.swift */; };
 		092471391FCF1E9B00CAE028 /* extension-TypeNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092471381FCF1E9B00CAE028 /* extension-TypeNewsVC.swift */; };
+		092472471FCF33A100CAE028 /* MJRefresh in Resources */ = {isa = PBXBuildFile; fileRef = 092472461FCF33A100CAE028 /* MJRefresh */; };
 		095B28C21FCD118E0098E55F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B28C11FCD118E0098E55F /* AppDelegate.swift */; };
 		095B28C41FCD118E0098E55F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B28C31FCD118E0098E55F /* ViewController.swift */; };
 		095B28C71FCD118E0098E55F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095B28C51FCD118E0098E55F /* Main.storyboard */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		092471361FCF132800CAE028 /* TypeNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeNewsViewController.swift; sourceTree = "<group>"; };
 		092471381FCF1E9B00CAE028 /* extension-TypeNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension-TypeNewsVC.swift"; sourceTree = "<group>"; };
+		0924713A1FCF2F5900CAE028 /* News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "News-Bridging-Header.h"; sourceTree = "<group>"; };
+		092472461FCF33A100CAE028 /* MJRefresh */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MJRefresh; path = Pods/MJRefresh/MJRefresh; sourceTree = SOURCE_ROOT; };
 		095B28BE1FCD118E0098E55F /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095B28C11FCD118E0098E55F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		095B28C31FCD118E0098E55F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				095B28BF1FCD118E0098E55F /* Products */,
 				095B28C81FCD118E0098E55F /* Assets.xcassets */,
 				095B28CD1FCD118E0098E55F /* Info.plist */,
+				0924713A1FCF2F5900CAE028 /* News-Bridging-Header.h */,
+				092472461FCF33A100CAE028 /* MJRefresh */,
 				095B29061FCF0AC10098E55F /* menu.png */,
 			);
 			path = News;
@@ -344,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092472471FCF33A100CAE028 /* MJRefresh in Resources */,
 				095B29071FCF0AC10098E55F /* menu.png in Resources */,
 				095B28CC1FCD118E0098E55F /* LaunchScreen.storyboard in Resources */,
 				095B28C91FCD118E0098E55F /* Assets.xcassets in Resources */,
@@ -488,6 +494,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-News/Pods-News-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -496,6 +503,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
