@@ -34,6 +34,8 @@ class SideMenuViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // 继承的 dataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuList.count
     }
@@ -45,6 +47,16 @@ class SideMenuViewController: UITableViewController {
         cell.accessoryType = UITableViewCellAccessoryType.detailButton
         return cell
     }
+    
+    //继承的delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pushViewController = TypeNewsViewController()
+        pushViewController.id = self.menuList[indexPath.row].id
+        pushViewController.type = self.menuList[indexPath.row].type
+        let nav2 = UINavigationController(rootViewController: pushViewController)
+        self.present(nav2, animated: true, completion: nil)
+    }
+    
 
     /*
     // MARK: - Navigation

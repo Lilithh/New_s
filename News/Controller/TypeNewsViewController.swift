@@ -17,15 +17,18 @@ class TypeNewsViewController: UIViewController, SideMenuDataRequest {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
         tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
         tableView.backgroundColor = .white
         tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "mySideMenu")
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         request.delegate = self
         request.requireData(id: self.id)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回🔙", style: .plain, target: self, action: Selector(("back")))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回🔙", style: .plain, target: self, action: #selector(TypeNewsViewController.back))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: " + ", style: .plain, target: self, action: nil)
+
         self.navigationItem.title = type
         self.view.addSubview(tableView)
     }
@@ -40,7 +43,7 @@ class TypeNewsViewController: UIViewController, SideMenuDataRequest {
         self.tableView.reloadData()
     }
     
-    func back() {
+    @objc func back() {
         self.dismiss(animated: true, completion: nil)
     }
     
