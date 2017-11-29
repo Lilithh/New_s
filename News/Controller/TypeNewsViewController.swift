@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 class TypeNewsViewController: UIViewController, SideMenuDataRequest {
     var news: [NewsContainer] = []
@@ -30,6 +31,8 @@ class TypeNewsViewController: UIViewController, SideMenuDataRequest {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: " + ", style: .plain, target: self, action: nil)
 
         self.navigationItem.title = type
+        self.tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(ViewController.downFresh))
+        self.tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: #selector(ViewController.upFresh))
         self.view.addSubview(tableView)
     }
 
@@ -46,7 +49,22 @@ class TypeNewsViewController: UIViewController, SideMenuDataRequest {
     @objc func back() {
         self.dismiss(animated: true, completion: nil)
     }
-    
+    //MJRefresh 下拉刷新
+    @objc func downFresh() {
+        self.tableView.mj_header.beginRefreshing()
+        request = SlideMenuDataGet()
+        request.requireData(id: self.id)
+        //    request.delegate = self
+        self.tableView.reloadData()
+        self.tableView.mj_header.endRefreshing()
+    }
+    //MJRefresh 上拉加载
+    @objc func upFresh(){
+        self.tableView.mj_footer.beginRefreshing()
+        self.tableView.reloadData()
+        self.tableView.mj_footer.endRefreshing()
+    }
+
 
     /*
     // MARK: - Navigation
