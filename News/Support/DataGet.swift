@@ -36,14 +36,41 @@ class DataGet {
     }
 }
 
-//slideMenu dataProvide
-
-//slideMenw dataprovide protocol
-
 // ViewController dataProvide protocol
 protocol ViewControllerDataRequest {
     func transValue(news: [NewsContainer])
 }
+
+
+//slideMenu dataProvide
+
+class SlideMenuDataGet {
+    var news: [NewsContainer] = []
+    var delegate: SideMenuDataRequest?
+    func requireData(id: String) {
+        Alamofire.request("http://open.twtstudio.com/api/v1/news/\(id)/page/1").responseJSON() { response in
+            if response.result.isSuccess {
+                if let json = response.result.value {
+                    let Json = JSON(json)
+                    let dataDict = Json["data"]
+                    for i in 0..<dataDict.count {
+                        var model = NewsContainer()
+                        model.index = dataDict[i]["index"].string
+                        model.subject = dataDict[i]["subject"].string
+                        model.pic = dataDict[i]["pic"].string
+                        self.news.append(model)
+                    }
+                    self.delegate?.transValue(news: self.news)
+                }
+            }
+        }
+    }
+}
+//slideMenw dataprovide protocol
+protocol SideMenuDataRequest {
+    func transValue(news: [NewsContainer])
+}
+
 
 
 
