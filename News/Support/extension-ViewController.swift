@@ -37,7 +37,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     //delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height/6
+        return UIScreen.main.bounds.height/7
     }
     
 }
