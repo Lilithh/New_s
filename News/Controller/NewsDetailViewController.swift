@@ -17,7 +17,7 @@ class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(url + index)
+//        print(url + index)
         loadRequest(url: (url + index))
         self.view.addSubview(webView)
         // Do any additional setup after loading the view.

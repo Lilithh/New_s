@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         //初始化一个导航栏
         let nav = UINavigationController(rootViewController: ViewController())
+        let SideMenuController = SideMenuViewController()
+        
+        let swiftSlideMenuViewController = SlideMenuController(mainViewController: nav, leftMenuViewController: SideMenuController)
+        
         //设定window的根视图
-        self.window?.rootViewController = nav
+        self.window?.rootViewController = swiftSlideMenuViewController
         self.window?.makeKeyAndVisible()
         
         return true
