@@ -40,4 +40,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return UIScreen.main.bounds.height/7
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pieceNews = self.news[indexPath.row]
+        let pushController = NewsDetailViewController()
+        pushController.index = pieceNews.index
+        self.navigationController?.pushViewController(pushController, animated: true)
+    }
+    
 }
