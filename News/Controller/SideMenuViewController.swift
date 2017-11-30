@@ -14,7 +14,7 @@ class SideMenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let type = ["天大风情","书香校园", "体育日报", "用户推荐日报"]
-        let id = ["2", "3", "4", "5"]
+        let id = ["1", "3", "2", "5"]
         for i in 0...3 {
             var model = SideMenuListContainer()
             model.type = type[i]

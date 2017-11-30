@@ -13,10 +13,10 @@ import SwiftyJSON
 class DataGet {
     var news: [NewsContainer] = []
     var delegate: ViewControllerDataRequest?
-    let url = "http://open.twtstudio.com/api/v1/news/1/page/1"
+    let url = "http://open.twtstudio.com/api/v1/news/4/page/1"
     func requireData() {
         var model = NewsContainer()
-        Alamofire.request("http://open.twtstudio.com/api/v1/news/1/page/1").responseJSON() { response in
+        Alamofire.request("http://open.twtstudio.com/api/v1/news/4/page/1").responseJSON() { response in
             if response.result.isSuccess {           //不加这个 会导致不会向下运行
                 if let json = response.result.value {
                 //解析 json
